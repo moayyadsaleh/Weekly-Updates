@@ -1,0 +1,37 @@
+/* Styles for layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+input,
+select,
+textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Logo styling */
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+/* Styling for instructor list */
+.instructor-list {
+  margin-top: 20px;
+}
