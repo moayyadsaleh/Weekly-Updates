@@ -72,6 +72,47 @@ function deleteInstructor(index) {
   renderInstructors();
 }
 
+// Function to export data to Excel
+function exportToExcel() {
+  const data = [
+    [
+      "Name",
+      "Location",
+      "Number of Students",
+      "Class Start Date",
+      "Class End Date",
+      "Students' Level",
+      "Delivery Method",
+      "Notes",
+    ],
+  ];
+
+  instructors.forEach((instructor) => {
+    const instructorData = [
+      instructor.name,
+      instructor.location,
+      instructor.students,
+      instructor.startDate,
+      instructor.endDate,
+      instructor.level,
+      instructor.deliveryMethod,
+      instructor.notes,
+    ];
+    data.push(instructorData);
+  });
+
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Instructor Data");
+  XLSX.writeFile(wb, "instructor_data.xlsx");
+}
+
+// Add a button to trigger the export
+const exportButton = document.createElement("button");
+exportButton.innerText = "Export to Excel";
+exportButton.addEventListener("click", exportToExcel);
+document.body.appendChild(exportButton);
+
 // Event listener for form submission
 document
   .getElementById("instructorForm")

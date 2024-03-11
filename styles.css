@@ -1,37 +1,50 @@
-/* Styles for layout */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
+
+.container {
+  margin: 20px;
+  max-width: 600px;
+}
+
+img.logo {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
 input,
 select,
 textarea {
-  margin-bottom: 10px;
   width: 100%;
   padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
+
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #4caf50;
   color: white;
+  padding: 10px;
   border: none;
   cursor: pointer;
 }
-button:hover {
-  background-color: #0056b3;
-}
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-/* Logo styling */
-.logo {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-/* Styling for instructor list */
+
 .instructor-list {
   margin-top: 20px;
 }
